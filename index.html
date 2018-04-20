@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Psychic Game Part 2
+  </title>
+</head>
+
+<body>
+        <h1>Psychic Game</h1>
+        <p>
+            Guess What I'm thinking of.
+        </p>
+      
+        <p id="Win Total">
+          Wins = 0
+        </p>
+      
+        <p id="Total Losses">
+            Losses = 0
+        </p>
+      
+        <p>
+            Guesses Left
+        </p>
+      
+        <p>
+            What you've guessed so far
+        </p>
+
+  <div id="game">
+
+  </div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      
+     
+      // Alerts the key the user pressed (userGuess).
+      alert("Guess what letter the computer is thinking of?");
+      
+      // Alerts the Computer's guess.
+      alert("Computer guess: " + computerGuess);
+
+      if (userGuess === computerGuess){
+        alert("you win!");
+      }
+      
+      else if(userGuess != computerGuess){
+        alert("you lose");
+      }
+     
+
+      
+      
+
+    };
+  </script>
+
+</body>
+
+</html>
