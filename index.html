@@ -13,62 +13,35 @@
             Guess What I'm thinking of.
         </p>
       
-        <p id="Win Total">
+        <p id="wins">
           Wins = 0
         </p>
       
-        <p id="Total Losses">
+        <p id="losses">
             Losses = 0
         </p>
       
-        <p>
+        <p id="guessesLeft">
             Guesses Left
         </p>
       
-        <p>
+        <p id="guessedLetter">
             What you've guessed so far
         </p>
 
   <div id="game">
+    
 
   </div>
-
-  <script type="text/javascript">
-
-    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-    var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-
-    // This function is run whenever the user presses a key.
-    document.onkeyup = function(event) {
-
-      
-      // Determines which key was pressed.
-      var userGuess = event.key;
-
-      // Randomly chooses a choice from the options array. This is the Computer's guess.
-      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-      
-     
-      // Alerts the key the user pressed (userGuess).
-      alert("Guess what letter the computer is thinking of?");
-      
-      // Alerts the Computer's guess.
-      alert("Computer guess: " + computerGuess);
-
-      if (userGuess === computerGuess){
-        alert("you win!");
-      }
-      
-      else if(userGuess != computerGuess){
-        alert("you lose");
-      }
-     
-
-      
-      
-
-    };
+  <div id="wins"></div>
+<br>
+    <div id="losses"></div>
+<br>
+    <div id="guessesLeft"></div>
+<br>
+    <div id="guessedLetters"></div>
+  <script type="text/javascript" src="assets/javascript/game.js">
+  
   </script>
 
 </body>
