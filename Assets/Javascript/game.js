@@ -30,7 +30,8 @@ document.onkeyup = function(event){
 
     // Creating if statement to only accepet alpha keys
 
-    
+       
+
         // If the user guesses the correct letter, they win, and game restarts 
         if (userGuess === compGuess){
         alert("You win! I mean that was what the computer was guessing. You, sir, are a savant.");
@@ -56,6 +57,9 @@ document.onkeyup = function(event){
             document.getElementById("guessedLetters").innnerHTML= "Guessed letters: " + guessedLetters + " , ";
             }}
 
+    
+        
+
     // Setting condition if player runs out of guesses
     if (guessesLeft == 0){
         guessesLeft = 10;
@@ -77,3 +81,4 @@ document.onkeyup = function(event){
 function lettersGuessed(){
     document.getElementById("guessedLetters").innerHTML= "Guessed letters: " + guessedLetters
 }
+
